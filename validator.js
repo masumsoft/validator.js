@@ -359,7 +359,7 @@
     };
 
     validator.isNumeric = function (str) {
-        return numeric.test(str);
+        return !isNaN(parseFloat(str)) && isFinite(str);
     };
 
     validator.isHexadecimal = function (str) {
